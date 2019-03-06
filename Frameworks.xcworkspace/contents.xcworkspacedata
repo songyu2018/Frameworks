@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:UtilityFramework/UtilityFramework.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:NetworkFramework/NetworkFramework.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CameraFramework/CameraFramework.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SampleApplication/SampleApplication.xcodeproj">
+   </FileRef>
+</Workspace>
