@@ -19,6 +19,10 @@
 		80A86CFE22302B1200DB6730 /* NetworkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A86CF322302AF300DB6730 /* NetworkFramework.framework */; };
 		80A86CFF22302B1200DB6730 /* UtilityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A86CF122302AE300DB6730 /* UtilityFramework.framework */; };
 		80AC6C98222EFB7B00B76A7C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC6C97222EFB7A00B76A7C /* ViewModel.swift */; };
+		80DC83112231AD8A00E369F0 /* contactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC83102231AD8A00E369F0 /* contactView.swift */; };
+		80F3305622316DBA0010C156 /* contactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F3305522316DBA0010C156 /* contactView.xib */; };
+		80FECC5F2230592D009DCF1A /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80FECC5E2230592D009DCF1A /* View.xib */; };
+		80FECC63223062BA009DCF1A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FECC62223062BA009DCF1A /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +53,10 @@
 		80A86CF322302AF300DB6730 /* NetworkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Frameworks-cioznbdotbkavpfehjuzfoxdwtml/Build/Products/Debug-iphonesimulator/NetworkFramework.framework"; sourceTree = "<group>"; };
 		80A86CF522302AFD00DB6730 /* CameraFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CameraFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Frameworks-cioznbdotbkavpfehjuzfoxdwtml/Build/Products/Debug-iphonesimulator/CameraFramework.framework"; sourceTree = "<group>"; };
 		80AC6C97222EFB7A00B76A7C /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		80DC83102231AD8A00E369F0 /* contactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactView.swift; sourceTree = "<group>"; };
+		80F3305522316DBA0010C156 /* contactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contactView.xib; sourceTree = "<group>"; };
+		80FECC5E2230592D009DCF1A /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		80FECC62223062BA009DCF1A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,7 @@
 		50831E2A1F82D5DC00687AAF /* SampleApplication */ = {
 			isa = PBXGroup;
 			children = (
+				80DC830F2231ACF300E369F0 /* XIbView */,
 				80AC6C97222EFB7A00B76A7C /* ViewModel.swift */,
 				50831E2B1F82D5DC00687AAF /* AppDelegate.swift */,
 				50831E2D1F82D5DC00687AAF /* ViewController.swift */,
@@ -104,6 +113,17 @@
 				80A86CF122302AE300DB6730 /* UtilityFramework.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		80DC830F2231ACF300E369F0 /* XIbView */ = {
+			isa = PBXGroup;
+			children = (
+				80DC83102231AD8A00E369F0 /* contactView.swift */,
+				80FECC62223062BA009DCF1A /* TableViewController.swift */,
+				80F3305522316DBA0010C156 /* contactView.xib */,
+				80FECC5E2230592D009DCF1A /* View.xib */,
+			);
+			path = XIbView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,8 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80FECC5F2230592D009DCF1A /* View.xib in Resources */,
 				50831E361F82D5DC00687AAF /* LaunchScreen.storyboard in Resources */,
 				50831E331F82D5DC00687AAF /* Assets.xcassets in Resources */,
+				80F3305622316DBA0010C156 /* contactView.xib in Resources */,
 				50831E311F82D5DC00687AAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +204,8 @@
 			files = (
 				50831E2E1F82D5DC00687AAF /* ViewController.swift in Sources */,
 				80AC6C98222EFB7B00B76A7C /* ViewModel.swift in Sources */,
+				80FECC63223062BA009DCF1A /* TableViewController.swift in Sources */,
+				80DC83112231AD8A00E369F0 /* contactView.swift in Sources */,
 				50831E2C1F82D5DC00687AAF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

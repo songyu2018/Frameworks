@@ -11,9 +11,14 @@ public extension UIView {
     class func fromNib<T: UIView>() -> T {
         return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
     }
+    
+    class func fromNib<T: UIView>(nibName : String) -> T {
+        return Bundle.main.loadNibNamed(nibName, owner: nil, options: nil)![0] as! T
+    }
 }
 // Usage:
 // let myCustomView: CustomView = UIView.fromNib()
+// let myCustomView: CustomView = UIView.fromNib(nibName: "View")
 
 public extension BinaryInteger {
     var degreesToRadians: CGFloat { return CGFloat(Int(self)) * .pi / 180 }

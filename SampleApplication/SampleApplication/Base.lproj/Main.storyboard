@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,9 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuO-2g-DeK">
-                                <rect key="frame" x="170" y="617" width="34" height="30"/>
+                                <rect key="frame" x="170.5" y="617" width="34" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="34" id="AcU-3Y-dhC"/>
                                     <constraint firstAttribute="height" constant="30" id="VQb-ec-anm"/>
                                 </constraints>
                                 <state key="normal" title="Start"/>
@@ -31,12 +31,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fzU-4G-CRR">
                                 <rect key="frame" x="34" y="56" width="307" height="555"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VkP-eg-DGU" customClass="contactView" customModule="SampleApplication" customModuleProvider="target">
+                                <rect key="frame" x="37" y="72" width="300" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Q3a-1C-cii"/>
+                                    <constraint firstAttribute="height" constant="150" id="hOt-0C-StB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="contactView"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fzU-4G-CRR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="Cxn-BP-pD3"/>
+                            <constraint firstItem="VkP-eg-DGU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="I8g-lb-WAk"/>
                             <constraint firstItem="IuO-2g-DeK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JGI-g6-eE0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IuO-2g-DeK" secondAttribute="bottom" constant="20" id="Mfu-kP-0a9"/>
+                            <constraint firstItem="VkP-eg-DGU" firstAttribute="leading" secondItem="fzU-4G-CRR" secondAttribute="leading" constant="3" id="j0s-y6-JRP"/>
                             <constraint firstItem="IuO-2g-DeK" firstAttribute="top" secondItem="fzU-4G-CRR" secondAttribute="bottom" constant="6" id="neY-FL-Jkq"/>
                             <constraint firstItem="fzU-4G-CRR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="w0V-dU-Uvz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fzU-4G-CRR" secondAttribute="trailing" constant="34" id="waf-jT-WrG"/>
@@ -50,6 +63,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-98.400000000000006" y="109.29535232383809"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="SW0-G1-vcw">
+            <objects>
+                <tableViewController id="4EN-ck-wOF" customClass="TableViewController" customModule="SampleApplication" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7VN-Wu-qP2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CELL" rowHeight="123" id="NQI-T3-fKM" customClass="TableCiewCell" customModule="SampleApplication">
+                                <rect key="frame" x="0.0" y="28" width="375" height="123"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NQI-T3-fKM" id="dHO-GX-vnx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="122.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0U-7w-cHN" customClass="contactView" customModule="SampleApplication">
+                                            <rect key="frame" x="0.0" y="-7" width="375" height="130"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="contactView"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="h0U-7w-cHN" secondAttribute="trailing" id="0XB-rI-Wy7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="h0U-7w-cHN" secondAttribute="bottom" constant="-11" id="LCm-w0-ggN"/>
+                                        <constraint firstItem="h0U-7w-cHN" firstAttribute="top" secondItem="dHO-GX-vnx" secondAttribute="topMargin" constant="-18" id="e3u-Dv-pX6"/>
+                                        <constraint firstItem="h0U-7w-cHN" firstAttribute="leading" secondItem="dHO-GX-vnx" secondAttribute="leading" id="hMV-VO-H39"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="view" destination="h0U-7w-cHN" id="Djd-ql-eAU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4EN-ck-wOF" id="VSa-Cn-U12"/>
+                            <outlet property="delegate" destination="4EN-ck-wOF" id="gqv-GP-oAq"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLX-Al-nsy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.79999999999995" y="-171.36431784107947"/>
         </scene>
     </scenes>
 </document>
