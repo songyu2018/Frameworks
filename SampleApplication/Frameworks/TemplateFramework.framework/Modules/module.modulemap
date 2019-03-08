@@ -1,0 +1,11 @@
+framework module TemplateFramework {
+  umbrella header "TemplateFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module TemplateFramework.Swift {
+    header "TemplateFramework-Swift.h"
+    requires objc
+}

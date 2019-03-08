@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var contactView: contactView!
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -26,6 +28,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -36,6 +41,9 @@ class ViewController: UIViewController {
         camera.delegate = self
         camera.position = .back
         present(camera, animated: true, completion: nil)
+        
+        //contactView.label1.text = "From Code."
+        //contactView.isHidden = true
         
         /*
          Test the Network facility
@@ -52,12 +60,15 @@ class ViewController: UIViewController {
          2. In the Nib file of the view, connect the outlet to the view, and not the file owner.
          https://stackoverflow.com/questions/51056322/load-xib-this-class-is-not-key-value-coding-compliant-for-the-key
          */
-//        let myContactView: contactView = XibView.fromNib()
+//        self.contactView.isHidden = true
+//
+//        let myContactView: contactView = UIView.fromNib()
+//        //myContactView.frame = CGRect(x: myContactView.frame.origin.x, y: myContactView.frame.origin.y, width: 300, height: 150)
 //        myContactView.label1.text = "successfully loaded from a Nib file."
 //        self.view.addSubview(myContactView)
-//
+
 //        let myView: UIView = XibView.fromNib(nibName: "View")
-//        myView.frame = CGRect(x: myView.frame.origin.x, y: myView.frame.origin.y + myView.frame.height, width: myView.frame.width, height: myView.frame.height)
+//        myView.frame = CGRect(x: myContactView.frame.origin.x, y: myContactView.frame.origin.y + myContactView.frame.height, width: myView.frame.width, height: myView.frame.height)
 //        self.view.addSubview(myView)
     }
 
