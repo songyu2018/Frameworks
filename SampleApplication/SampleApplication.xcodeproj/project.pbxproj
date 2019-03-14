@@ -23,6 +23,8 @@
 		80AC6C98222EFB7B00B76A7C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC6C97222EFB7A00B76A7C /* ViewModel.swift */; };
 		80DC83112231AD8A00E369F0 /* contactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC83102231AD8A00E369F0 /* contactView.swift */; };
 		80F3305622316DBA0010C156 /* contactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F3305522316DBA0010C156 /* contactView.xib */; };
+		80F9BD03223AB8E10025EB54 /* Neon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F9BD01223AB8CC0025EB54 /* Neon.framework */; };
+		80F9BD04223AB8E10025EB54 /* Neon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80F9BD01223AB8CC0025EB54 /* Neon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80FECC5F2230592D009DCF1A /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80FECC5E2230592D009DCF1A /* View.xib */; };
 		80FECC63223062BA009DCF1A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FECC62223062BA009DCF1A /* TableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,7 @@
 				80A86CFC22302B0A00DB6730 /* UtilityFramework.framework in Embed Frameworks */,
 				806FC0EF2232F15E0019C897 /* TemplateFramework.framework in Embed Frameworks */,
 				80A86CFA22302B0A00DB6730 /* NetworkFramework.framework in Embed Frameworks */,
+				80F9BD04223AB8E10025EB54 /* Neon.framework in Embed Frameworks */,
 				80A86CF822302B0A00DB6730 /* CameraFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -59,6 +62,7 @@
 		80AC6C97222EFB7A00B76A7C /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		80DC83102231AD8A00E369F0 /* contactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactView.swift; sourceTree = "<group>"; };
 		80F3305522316DBA0010C156 /* contactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contactView.xib; sourceTree = "<group>"; };
+		80F9BD01223AB8CC0025EB54 /* Neon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Neon.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Frameworks-cioznbdotbkavpfehjuzfoxdwtml/Build/Products/Debug-iphoneos/Neon.framework"; sourceTree = "<group>"; };
 		80FECC5E2230592D009DCF1A /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		80FECC62223062BA009DCF1A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F9BD03223AB8E10025EB54 /* Neon.framework in Frameworks */,
 				80A86CFD22302B1200DB6730 /* CameraFramework.framework in Frameworks */,
 				806FC0EE2232F15E0019C897 /* TemplateFramework.framework in Frameworks */,
 				80A86CFE22302B1200DB6730 /* NetworkFramework.framework in Frameworks */,
@@ -113,6 +118,7 @@
 		50831E3D1F82D65300687AAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				80F9BD01223AB8CC0025EB54 /* Neon.framework */,
 				806FC0EC2232F15B0019C897 /* TemplateFramework.framework */,
 				80A86CF522302AFD00DB6730 /* CameraFramework.framework */,
 				80A86CF322302AF300DB6730 /* NetworkFramework.framework */,
@@ -357,6 +363,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68AG4FVQ5X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = SampleApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yusong.SampleApplication;
@@ -372,6 +382,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68AG4FVQ5X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = SampleApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yusong.SampleApplication;
