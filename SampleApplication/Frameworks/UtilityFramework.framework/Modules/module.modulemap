@@ -1,0 +1,11 @@
+framework module UtilityFramework {
+  umbrella header "UtilityFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module UtilityFramework.Swift {
+    header "UtilityFramework-Swift.h"
+    requires objc
+}

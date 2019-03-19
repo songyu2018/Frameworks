@@ -185,7 +185,6 @@
 				27D253A01BAF735300FA4FED /* Supporting Files */,
 			);
 			name = Demo;
-			path = Neon;
 			sourceTree = "<group>";
 		};
 		27D253971BAF71C700FA4FED /* Source */ = {
@@ -200,7 +199,6 @@
 				03EDD39F1BBF8A6A0006C4A9 /* Supporting Files */,
 			);
 			name = Source;
-			path = ../../Source;
 			sourceTree = "<group>";
 		};
 		27D253A01BAF735300FA4FED /* Supporting Files */ = {

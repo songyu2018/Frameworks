@@ -12,19 +12,31 @@
 		50831E311F82D5DC00687AAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50831E2F1F82D5DC00687AAF /* Main.storyboard */; };
 		50831E331F82D5DC00687AAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50831E321F82D5DC00687AAF /* Assets.xcassets */; };
 		50831E361F82D5DC00687AAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50831E341F82D5DC00687AAF /* LaunchScreen.storyboard */; };
-		806FC0EE2232F15E0019C897 /* TemplateFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806FC0EC2232F15B0019C897 /* TemplateFramework.framework */; };
-		806FC0EF2232F15E0019C897 /* TemplateFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 806FC0EC2232F15B0019C897 /* TemplateFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		80A86CF822302B0A00DB6730 /* CameraFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80A86CF522302AFD00DB6730 /* CameraFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		80A86CFA22302B0A00DB6730 /* NetworkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80A86CF322302AF300DB6730 /* NetworkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		80A86CFC22302B0A00DB6730 /* UtilityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80A86CF122302AE300DB6730 /* UtilityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		80A86CFD22302B1200DB6730 /* CameraFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A86CF522302AFD00DB6730 /* CameraFramework.framework */; };
-		80A86CFE22302B1200DB6730 /* NetworkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A86CF322302AF300DB6730 /* NetworkFramework.framework */; };
-		80A86CFF22302B1200DB6730 /* UtilityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A86CF122302AE300DB6730 /* UtilityFramework.framework */; };
 		80AC6C98222EFB7B00B76A7C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC6C97222EFB7A00B76A7C /* ViewModel.swift */; };
+		80BC084922413B8D0016AA19 /* SwipeCellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC084722413B8D0016AA19 /* SwipeCellKit.framework */; };
+		80BC084A22413B9C0016AA19 /* FSPagerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC084622413B8D0016AA19 /* FSPagerView.framework */; };
+		80BC084B22413B9C0016AA19 /* FSPagerView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC084622413B8D0016AA19 /* FSPagerView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80BC084D22413B9C0016AA19 /* SwipeCellKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC084722413B8D0016AA19 /* SwipeCellKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80BC0852224151C40016AA19 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC084F224151C30016AA19 /* Data.swift */; };
+		80BC0853224151C40016AA19 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC0850224151C40016AA19 /* Shared.swift */; };
+		80BC0854224151C40016AA19 /* MailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC0851224151C40016AA19 /* MailTableViewController.swift */; };
+		80BC0859224157CB0016AA19 /* UtilityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC0858224157CB0016AA19 /* UtilityFramework.framework */; };
+		80BC085B224157E80016AA19 /* NetworkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC085A224157E80016AA19 /* NetworkFramework.framework */; };
+		80BC085D224157F50016AA19 /* CameraFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC085C224157F50016AA19 /* CameraFramework.framework */; };
+		80BC0866224164350016AA19 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80BC085F224164330016AA19 /* 4.jpg */; };
+		80BC0867224164350016AA19 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80BC0860224164330016AA19 /* 3.jpg */; };
+		80BC0868224164350016AA19 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80BC0861224164340016AA19 /* 6.jpg */; };
+		80BC0869224164350016AA19 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80BC0862224164340016AA19 /* 2.jpg */; };
+		80BC086A224164350016AA19 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80BC0863224164340016AA19 /* 5.jpg */; };
+		80BC086B224164350016AA19 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80BC0864224164340016AA19 /* 1.jpg */; };
+		80BC086C224164350016AA19 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80BC0865224164350016AA19 /* 7.jpg */; };
+		80BC0871224165AB0016AA19 /* PageControlExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC086E224165AB0016AA19 /* PageControlExampleViewController.swift */; };
+		80BC0872224165AB0016AA19 /* BasicExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC086F224165AB0016AA19 /* BasicExampleViewController.swift */; };
+		80BC0873224165AB0016AA19 /* TransformerExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC0870224165AB0016AA19 /* TransformerExampleViewController.swift */; };
+		80BC0875224169CC0016AA19 /* Neon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC0874224169CB0016AA19 /* Neon.framework */; };
+		80BC0877224169F50016AA19 /* TemplateFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC0876224169F40016AA19 /* TemplateFramework.framework */; };
 		80DC83112231AD8A00E369F0 /* contactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC83102231AD8A00E369F0 /* contactView.swift */; };
 		80F3305622316DBA0010C156 /* contactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F3305522316DBA0010C156 /* contactView.xib */; };
-		80F9BD03223AB8E10025EB54 /* Neon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F9BD01223AB8CC0025EB54 /* Neon.framework */; };
-		80F9BD04223AB8E10025EB54 /* Neon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80F9BD01223AB8CC0025EB54 /* Neon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80FECC5F2230592D009DCF1A /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80FECC5E2230592D009DCF1A /* View.xib */; };
 		80FECC63223062BA009DCF1A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FECC62223062BA009DCF1A /* TableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,11 +48,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				80A86CFC22302B0A00DB6730 /* UtilityFramework.framework in Embed Frameworks */,
-				806FC0EF2232F15E0019C897 /* TemplateFramework.framework in Embed Frameworks */,
-				80A86CFA22302B0A00DB6730 /* NetworkFramework.framework in Embed Frameworks */,
-				80F9BD04223AB8E10025EB54 /* Neon.framework in Embed Frameworks */,
-				80A86CF822302B0A00DB6730 /* CameraFramework.framework in Embed Frameworks */,
+				80BC084B22413B9C0016AA19 /* FSPagerView.framework in Embed Frameworks */,
+				80BC084D22413B9C0016AA19 /* SwipeCellKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,14 +64,29 @@
 		50831E321F82D5DC00687AAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50831E351F82D5DC00687AAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50831E371F82D5DC00687AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		806FC0EC2232F15B0019C897 /* TemplateFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TemplateFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Frameworks-cioznbdotbkavpfehjuzfoxdwtml/Build/Products/Debug-iphonesimulator/TemplateFramework.framework"; sourceTree = "<group>"; };
-		80A86CF122302AE300DB6730 /* UtilityFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UtilityFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Frameworks-cioznbdotbkavpfehjuzfoxdwtml/Build/Products/Debug-iphonesimulator/UtilityFramework.framework"; sourceTree = "<group>"; };
-		80A86CF322302AF300DB6730 /* NetworkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Frameworks-cioznbdotbkavpfehjuzfoxdwtml/Build/Products/Debug-iphonesimulator/NetworkFramework.framework"; sourceTree = "<group>"; };
-		80A86CF522302AFD00DB6730 /* CameraFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CameraFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Frameworks-cioznbdotbkavpfehjuzfoxdwtml/Build/Products/Debug-iphonesimulator/CameraFramework.framework"; sourceTree = "<group>"; };
 		80AC6C97222EFB7A00B76A7C /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		80BC084622413B8D0016AA19 /* FSPagerView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FSPagerView.framework; sourceTree = "<group>"; };
+		80BC084722413B8D0016AA19 /* SwipeCellKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwipeCellKit.framework; sourceTree = "<group>"; };
+		80BC084F224151C30016AA19 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		80BC0850224151C40016AA19 /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		80BC0851224151C40016AA19 /* MailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailTableViewController.swift; sourceTree = "<group>"; };
+		80BC0858224157CB0016AA19 /* UtilityFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UtilityFramework.framework; sourceTree = "<group>"; };
+		80BC085A224157E80016AA19 /* NetworkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkFramework.framework; sourceTree = "<group>"; };
+		80BC085C224157F50016AA19 /* CameraFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CameraFramework.framework; sourceTree = "<group>"; };
+		80BC085F224164330016AA19 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		80BC0860224164330016AA19 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		80BC0861224164340016AA19 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		80BC0862224164340016AA19 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		80BC0863224164340016AA19 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		80BC0864224164340016AA19 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		80BC0865224164350016AA19 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		80BC086E224165AB0016AA19 /* PageControlExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlExampleViewController.swift; sourceTree = "<group>"; };
+		80BC086F224165AB0016AA19 /* BasicExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicExampleViewController.swift; sourceTree = "<group>"; };
+		80BC0870224165AB0016AA19 /* TransformerExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformerExampleViewController.swift; sourceTree = "<group>"; };
+		80BC0874224169CB0016AA19 /* Neon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Neon.framework; sourceTree = "<group>"; };
+		80BC0876224169F40016AA19 /* TemplateFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TemplateFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Frameworks-cioznbdotbkavpfehjuzfoxdwtml/Build/Products/Debug-iphonesimulator/TemplateFramework.framework"; sourceTree = "<group>"; };
 		80DC83102231AD8A00E369F0 /* contactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactView.swift; sourceTree = "<group>"; };
 		80F3305522316DBA0010C156 /* contactView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contactView.xib; sourceTree = "<group>"; };
-		80F9BD01223AB8CC0025EB54 /* Neon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Neon.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Frameworks-cioznbdotbkavpfehjuzfoxdwtml/Build/Products/Debug-iphoneos/Neon.framework"; sourceTree = "<group>"; };
 		80FECC5E2230592D009DCF1A /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		80FECC62223062BA009DCF1A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,11 +96,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80F9BD03223AB8E10025EB54 /* Neon.framework in Frameworks */,
-				80A86CFD22302B1200DB6730 /* CameraFramework.framework in Frameworks */,
-				806FC0EE2232F15E0019C897 /* TemplateFramework.framework in Frameworks */,
-				80A86CFE22302B1200DB6730 /* NetworkFramework.framework in Frameworks */,
-				80A86CFF22302B1200DB6730 /* UtilityFramework.framework in Frameworks */,
+				80BC085D224157F50016AA19 /* CameraFramework.framework in Frameworks */,
+				80BC0877224169F50016AA19 /* TemplateFramework.framework in Frameworks */,
+				80BC0875224169CC0016AA19 /* Neon.framework in Frameworks */,
+				80BC0859224157CB0016AA19 /* UtilityFramework.framework in Frameworks */,
+				80BC085B224157E80016AA19 /* NetworkFramework.framework in Frameworks */,
+				80BC084A22413B9C0016AA19 /* FSPagerView.framework in Frameworks */,
+				80BC084922413B8D0016AA19 /* SwipeCellKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +129,9 @@
 		50831E2A1F82D5DC00687AAF /* SampleApplication */ = {
 			isa = PBXGroup;
 			children = (
+				80BC084E2241519D0016AA19 /* SwipeCellMenu */,
+				80BC086D224164810016AA19 /* PagerView */,
+				80BC085E224164200016AA19 /* Resources */,
 				80DC830F2231ACF300E369F0 /* XIbView */,
 				80AC6C97222EFB7A00B76A7C /* ViewModel.swift */,
 				50831E2B1F82D5DC00687AAF /* AppDelegate.swift */,
@@ -118,13 +147,49 @@
 		50831E3D1F82D65300687AAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				80F9BD01223AB8CC0025EB54 /* Neon.framework */,
-				806FC0EC2232F15B0019C897 /* TemplateFramework.framework */,
-				80A86CF522302AFD00DB6730 /* CameraFramework.framework */,
-				80A86CF322302AF300DB6730 /* NetworkFramework.framework */,
-				80A86CF122302AE300DB6730 /* UtilityFramework.framework */,
+				80BC0876224169F40016AA19 /* TemplateFramework.framework */,
+				80BC0874224169CB0016AA19 /* Neon.framework */,
+				80BC085C224157F50016AA19 /* CameraFramework.framework */,
+				80BC085A224157E80016AA19 /* NetworkFramework.framework */,
+				80BC0858224157CB0016AA19 /* UtilityFramework.framework */,
+				80BC084622413B8D0016AA19 /* FSPagerView.framework */,
+				80BC084722413B8D0016AA19 /* SwipeCellKit.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		80BC084E2241519D0016AA19 /* SwipeCellMenu */ = {
+			isa = PBXGroup;
+			children = (
+				80BC084F224151C30016AA19 /* Data.swift */,
+				80BC0851224151C40016AA19 /* MailTableViewController.swift */,
+				80BC0850224151C40016AA19 /* Shared.swift */,
+			);
+			path = SwipeCellMenu;
+			sourceTree = "<group>";
+		};
+		80BC085E224164200016AA19 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				80BC0864224164340016AA19 /* 1.jpg */,
+				80BC0862224164340016AA19 /* 2.jpg */,
+				80BC0860224164330016AA19 /* 3.jpg */,
+				80BC085F224164330016AA19 /* 4.jpg */,
+				80BC0863224164340016AA19 /* 5.jpg */,
+				80BC0861224164340016AA19 /* 6.jpg */,
+				80BC0865224164350016AA19 /* 7.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		80BC086D224164810016AA19 /* PagerView */ = {
+			isa = PBXGroup;
+			children = (
+				80BC086F224165AB0016AA19 /* BasicExampleViewController.swift */,
+				80BC086E224165AB0016AA19 /* PageControlExampleViewController.swift */,
+				80BC0870224165AB0016AA19 /* TransformerExampleViewController.swift */,
+			);
+			path = PagerView;
 			sourceTree = "<group>";
 		};
 		80DC830F2231ACF300E369F0 /* XIbView */ = {
@@ -199,10 +264,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80BC086B224164350016AA19 /* 1.jpg in Resources */,
+				80BC0866224164350016AA19 /* 4.jpg in Resources */,
+				80BC086A224164350016AA19 /* 5.jpg in Resources */,
+				80BC086C224164350016AA19 /* 7.jpg in Resources */,
 				80FECC5F2230592D009DCF1A /* View.xib in Resources */,
+				80BC0868224164350016AA19 /* 6.jpg in Resources */,
+				80BC0869224164350016AA19 /* 2.jpg in Resources */,
 				50831E361F82D5DC00687AAF /* LaunchScreen.storyboard in Resources */,
 				50831E331F82D5DC00687AAF /* Assets.xcassets in Resources */,
 				80F3305622316DBA0010C156 /* contactView.xib in Resources */,
+				80BC0867224164350016AA19 /* 3.jpg in Resources */,
 				50831E311F82D5DC00687AAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,10 +286,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80BC0852224151C40016AA19 /* Data.swift in Sources */,
 				50831E2E1F82D5DC00687AAF /* ViewController.swift in Sources */,
 				80AC6C98222EFB7B00B76A7C /* ViewModel.swift in Sources */,
 				80FECC63223062BA009DCF1A /* TableViewController.swift in Sources */,
+				80BC0872224165AB0016AA19 /* BasicExampleViewController.swift in Sources */,
 				80DC83112231AD8A00E369F0 /* contactView.swift in Sources */,
+				80BC0853224151C40016AA19 /* Shared.swift in Sources */,
+				80BC0871224165AB0016AA19 /* PageControlExampleViewController.swift in Sources */,
+				80BC0854224151C40016AA19 /* MailTableViewController.swift in Sources */,
+				80BC0873224165AB0016AA19 /* TransformerExampleViewController.swift in Sources */,
 				50831E2C1F82D5DC00687AAF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

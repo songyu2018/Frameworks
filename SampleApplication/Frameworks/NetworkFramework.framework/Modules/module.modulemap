@@ -1,0 +1,11 @@
+framework module NetworkFramework {
+  umbrella header "NetworkFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module NetworkFramework.Swift {
+    header "NetworkFramework-Swift.h"
+    requires objc
+}
