@@ -142,6 +142,19 @@ class MailTableViewController: UITableViewController {
         usesTallCells = false
         tableView.reloadData()
     }
+    
+    // MARK: Pull to refresh logic.
+    @objc func refresh(sender:AnyObject) {
+        // Updating your data here...
+        
+        self.tableView.reloadData()
+        
+        DispatchQueue.global().async {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(3)) {
+                self.refreshControl?.endRefreshing()
+            }
+        }
+    }
 }
 
 extension MailTableViewController: SwipeTableViewCellDelegate {
@@ -224,21 +237,7 @@ extension MailTableViewController: SwipeTableViewCellDelegate {
             action.transitionDelegate = ScaleTransition.default
         }
     }
-    
-    
-    // MARK: Pull to refresh logic.
-    @objc func refresh(sender:AnyObject) {
-        // Updating your data here...
-        
-        self.tableView.reloadData()
-        
-        DispatchQueue.global().async {
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(3)) {
-                self.refreshControl?.endRefreshing()
-            }
-        }
-    }
-    
+
 }
 
 class MailCell: SwipeTableViewCell {

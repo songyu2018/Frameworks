@@ -9,9 +9,9 @@
 import UIKit
 import FSPagerView
 
-class BasicExampleViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,FSPagerViewDataSource,FSPagerViewDelegate {
+class BasicExampleViewController: UIViewController {
     
-    fileprivate let sectionTitles = ["Configurations", "Decelaration Distance", "Item Size", "Interitem Spacing", "Number Of Items"]
+    fileprivate let sectionTitles = ["Configurations", "Decelaration Distance", "Item Size", "Interitem Spacing", "Number Of Items", "Pager In Cell"]
     fileprivate let configurationTitles = ["Automatic sliding","Infinite"]
     fileprivate let decelerationDistanceOptions = ["Automatic", "1", "2"]
     fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
@@ -32,7 +32,11 @@ class BasicExampleViewController: UIViewController,UITableViewDataSource,UITable
             self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         }
     }
-    
+}
+
+
+
+extension BasicExampleViewController: UITableViewDataSource,UITableViewDelegate {
     // MARK:- UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,7 +49,7 @@ class BasicExampleViewController: UIViewController,UITableViewDataSource,UITable
             return self.configurationTitles.count
         case 1:
             return self.decelerationDistanceOptions.count
-        case 2,3,4:
+        case 2,3,4,5:
             return 1
         default:
             return 0
@@ -111,6 +115,22 @@ class BasicExampleViewController: UIViewController,UITableViewDataSource,UITable
             slider.value = Float(self.numberOfItems) / 7.0
             slider.isContinuous = false
             return cell
+        case 5:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "pager_view_cell")!
+            let pager = cell.contentView.subviews.first as! FSPagerView
+            pager.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
+            pager.itemSize = FSPagerView.automaticSize
+            pager.dataSource = self
+            pager.delegate = self
+            
+            
+            let control = cell.contentView.subviews[1] as! FSPageControl
+            control.numberOfPages = self.imageNames.count
+            control.contentHorizontalAlignment = .right
+            control.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+            control.currentPage = 0
+            pager.bringSubviewToFront(control)
+            return cell
         default:
             break
         }
@@ -158,6 +178,18 @@ class BasicExampleViewController: UIViewController,UITableViewDataSource,UITable
         return section == 0 ? 40 : 20
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 5 {
+            return 195.0
+        }
+        else {
+            return 50.0
+        }
+    }
+}
+
+
+extension BasicExampleViewController: FSPagerViewDataSource,FSPagerViewDelegate {
     // MARK:- FSPagerView DataSource
     
     public func numberOfItems(in pagerView: FSPagerView) -> Int {
@@ -169,7 +201,7 @@ class BasicExampleViewController: UIViewController,UITableViewDataSource,UITable
         cell.imageView?.image = UIImage(named: self.imageNames[index])
         cell.imageView?.contentMode = .scaleAspectFill
         cell.imageView?.clipsToBounds = true
-        cell.textLabel?.text = index.description+index.description
+        cell.textLabel?.text = index.description
         return cell
     }
     
@@ -182,10 +214,23 @@ class BasicExampleViewController: UIViewController,UITableViewDataSource,UITable
     
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
         self.pageControl.currentPage = targetIndex
+        
+        // Change the Page Control in cell.
+        if let cell = self.tableView.cellForRow(at: IndexPath(row: 0, section: 5)) {
+            let control = cell.contentView.subviews[1] as! FSPageControl
+            control.currentPage = targetIndex
+        }
+        
     }
     
     func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
         self.pageControl.currentPage = pagerView.currentIndex
+        
+        // Change the Page Control in cell.
+        if let cell = self.tableView.cellForRow(at: IndexPath(row: 0, section: 5)) {
+            let control = cell.contentView.subviews[1] as! FSPageControl
+            control.currentPage = pagerView.currentIndex
+        }
     }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
@@ -204,5 +249,3 @@ class BasicExampleViewController: UIViewController,UITableViewDataSource,UITable
         }
     }
 }
-
-

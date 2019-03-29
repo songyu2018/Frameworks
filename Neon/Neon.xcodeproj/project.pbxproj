@@ -90,6 +90,7 @@
 		03EDD3C31BBF8CEC0006C4A9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Demo/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		27D253661BAF71AB00FA4FED /* Neon_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neon_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E7D6F61D520983007288D6 /* NeonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeonExtensions.swift; path = Source/NeonExtensions.swift; sourceTree = SOURCE_ROOT; };
+		801741E222440D3000CC92DC /* Neon_Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Neon_Demo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +155,7 @@
 		27D2535D1BAF71AB00FA4FED = {
 			isa = PBXGroup;
 			children = (
+				801741E222440D3000CC92DC /* Neon_Demo.entitlements */,
 				27D253971BAF71C700FA4FED /* Source */,
 				27D253681BAF71AB00FA4FED /* Demo */,
 				036A08331BBF919E000B093A /* NeonUnitTests */,
@@ -333,6 +335,11 @@
 						DevelopmentTeam = 9W3UPW3F39;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
