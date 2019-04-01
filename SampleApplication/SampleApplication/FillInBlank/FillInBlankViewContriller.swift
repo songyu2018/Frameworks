@@ -70,7 +70,7 @@ class FillInBlankViewController: UIViewController {
             paragraphStyle.lineSpacing = lineSpacing
             attributedString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: stringarr.count))
             attributedString.addAttribute(.foregroundColor, value: UIColor.black, range: NSRange(location: 0, length: stringarr.count))
-            attributedString.addAttribute(.font, value: UIFont(name: "AvenirNext-Regular", size: 10.0)!, range: NSRange(location: 0, length: stringarr.count))
+            attributedString.addAttribute(.font, value: UIFont(name: "AvenirNext-Regular", size: 20.0)!, range: NSRange(location: 0, length: stringarr.count))
             
             
             let regex = try! NSRegularExpression(pattern: "\\s", options: [])
@@ -97,14 +97,27 @@ class FillInBlankViewController: UIViewController {
             textView.addSubview({
                 let range = m.range
                 let frame = frameOfTextInRange(range: range, inTextView: textView).insetBy(dx: CGFloat(-2), dy: CGFloat(3)).offsetBy(dx: CGFloat(0), dy: CGFloat(3))
-                let v = UIView(frame: frame)
+                let v = UITextView(frame: frame)
                 v.layer.cornerRadius = 0
                 v.layer.borderColor = UIColor.red.cgColor
                 v.layer.borderWidth = 1
                 //v.backgroundColor = UIColor.black
+                
+                v.addGestureRecognizer(UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:))))
+                
                 return v
-                }())
+            }())
         }
+    }
+    
+    
+    @objc func someAction(_ sender:UITapGestureRecognizer){
+        print("triggered!")
+        let view = sender.view as? UITextView
+        view?.font = UIFont(name: "AvenirNext-Regular", size: 20.0)
+        view?.textAlignment = .center
+        view?.textColor = UIColor.lightGray
+        view?.text = "selected"
     }
 
 }
