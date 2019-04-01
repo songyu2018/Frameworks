@@ -41,6 +41,7 @@
 		80BC087E22417C570016AA19 /* NetworkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC085A224157E80016AA19 /* NetworkFramework.framework */; };
 		80BC087F22417C570016AA19 /* NetworkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC085A224157E80016AA19 /* NetworkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80BC088122417C570016AA19 /* UtilityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80BC0858224157CB0016AA19 /* UtilityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80D6DB2622527C1A0016DCB5 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6DB2522527C1A0016DCB5 /* Dictionary.swift */; };
 		80DC83112231AD8A00E369F0 /* contactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC83102231AD8A00E369F0 /* contactView.swift */; };
 		80EF79A4224E87260029A732 /* ControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80EF79A2224E87260029A732 /* ControlPanel.xib */; };
 		80EF79A5224E87260029A732 /* ControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EF79A3224E87260029A732 /* ControlPanel.swift */; };
@@ -101,6 +102,7 @@
 		80BC0870224165AB0016AA19 /* TransformerExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformerExampleViewController.swift; sourceTree = "<group>"; };
 		80BC0874224169CB0016AA19 /* Neon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Neon.framework; sourceTree = "<group>"; };
 		80BC0876224169F40016AA19 /* TemplateFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TemplateFramework.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Frameworks-cioznbdotbkavpfehjuzfoxdwtml/Build/Products/Debug-iphonesimulator/TemplateFramework.framework"; sourceTree = "<group>"; };
+		80D6DB2522527C1A0016DCB5 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		80DC83102231AD8A00E369F0 /* contactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactView.swift; sourceTree = "<group>"; };
 		80EF79A2224E87260029A732 /* ControlPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControlPanel.xib; sourceTree = "<group>"; };
 		80EF79A3224E87260029A732 /* ControlPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlPanel.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		50831E2A1F82D5DC00687AAF /* SampleApplication */ = {
 			isa = PBXGroup;
 			children = (
+				80D6DB2322527BFA0016DCB5 /* Dictionary */,
 				80EF79AA224E94000029A732 /* FillInBlank */,
 				80EF79A1224E871A0029A732 /* ControlPanel */,
 				80BC084E2241519D0016AA19 /* SwipeCellMenu */,
@@ -216,6 +219,22 @@
 				80BC0870224165AB0016AA19 /* TransformerExampleViewController.swift */,
 			);
 			path = PagerView;
+			sourceTree = "<group>";
+		};
+		80D6DB2322527BFA0016DCB5 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				80D6DB2422527C060016DCB5 /* Model */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		80D6DB2422527C060016DCB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80D6DB2522527C1A0016DCB5 /* Dictionary.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		80DC830F2231ACF300E369F0 /* XIbView */ = {
@@ -348,6 +367,7 @@
 				80BC0853224151C40016AA19 /* Shared.swift in Sources */,
 				80BC0871224165AB0016AA19 /* PageControlExampleViewController.swift in Sources */,
 				80BC0854224151C40016AA19 /* MailTableViewController.swift in Sources */,
+				80D6DB2622527C1A0016DCB5 /* Dictionary.swift in Sources */,
 				80BC0873224165AB0016AA19 /* TransformerExampleViewController.swift in Sources */,
 				50831E2C1F82D5DC00687AAF /* AppDelegate.swift in Sources */,
 			);

@@ -20,7 +20,36 @@ class FillInBlankViewController: UIViewController {
        
         self.drawBlankBoxes()
         
+        loopup(sWork: "good")
         
+    }
+    
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
+
+    
+    func loopup(sWork: String) {
+        let myLoader: ViewModel = ViewModel(dataTaskState: .active, extra_resonse_delay_milliseconds: 0)
+        myLoader.dataTask(method: .GET, sURL: "https://od-api.oxforddictionaries.com/api/v1/entries/en/change/translations=tn", headers: ["Accept":"application/json", "app_id":"36657328", "app_key":"df95d34ce6c52d9ac2f25418d760adb7"], body: nil) { (success, dictResponse) in
+            //print(dictResponse)
+            
+            if let response = dictResponse["__RESPONSE__"]{
+                do {
+                    let data = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
+                    let model = try JSONDecoder().decode(Dictionary.self, from: data)
+                    print(model.metadata?.provider ?? "Error")
+                    print(model.results?[0].lexicalEntries?[0].entries?[0].grammaticalFeatures?[0].text ?? "Error")
+                } catch { print(error) }
+            }
+        }
     }
     
     
