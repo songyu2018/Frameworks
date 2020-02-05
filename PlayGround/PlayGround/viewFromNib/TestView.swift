@@ -14,9 +14,15 @@ import UtilityFramework
 
 /*
     How to setup:
-        1. In the nib file, chose the `File's Owner` and then set the `Class` field to `TestView`
-        2. Keep the `Class` field of the `View` as `UIView`, otherwise it can run into deadloop situation.
-        3. Setup the `IBOutlets` and `IBAcitons` to this class not the super class `XibView`
+        1. Create the nib and view files.
+        2. In the nib file, chose the `File's Owner` and then set the `Class` field to `TestView`
+        3. Keep the `Class` field of the `View` as `UIView`, otherwise it can run into deadloop situation.
+        4. Setup the `IBOutlets` and `IBAcitons` to this class not the super class `XibView`
+ 
+    Note:
+        1. If the UI is not showing in the IB, adding @IBDesignable to the class can solve the problem.
+        2. Make sure the nib and view files have the same name, otherwise specify the nib name in the `loadViewFromNib` method.
+        3. The code for how to init the same view with code is in `FirstViewController.swift`
 */
 class TestView: XibView {
 
