@@ -1,18 +1,42 @@
 //
-//  IndexControllerTableViewController.swift
+//  TestNetworking.swift
 //  PlayGround
 //
-//  Created by Yu Song on 2020-02-04.
+//  Created by Yu Song on 2020-02-05.
 //  Copyright © 2020 Yu Song. All rights reserved.
 //
 
 import UIKit
+import NetworkFramework
 
-class IndexController: UITableViewController {
 
+
+class TestNetworking: UITableViewController {
+
+    let url = "https://my-json-server.typicode.com/songyu2018/Frameworks/db"
+    var posts: [Post] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NetworkingManager.shared.dataTask(method: .GET, sURL: url, headers: nil, body: nil) { (success, dictResponse) in
+                           print(dictResponse)
+            if let response = dictResponse[NetworkingManager.RESPONSE]{
+                self.parseData(data: response)
+            }
+        }
+        
+        NetworkingManager.shared.get(url: url) { result in
+            switch result {
+            case.results(let results):
+                print("Result: \(results)")
+                self.parseData(data: results.self)
+            case.error(let error):
+                print("Error: \(error)")
+            }
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,51 +44,38 @@ class IndexController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    private func parseData(data: Any) {
+        do {
+            let data = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+            let model = try JSONDecoder().decode(Posts.self, from: data)
+            if let posts = model.posts {
+                self.posts = posts
+            }
+            self.tableView.reloadData()
+        } catch { print(error) }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 2
+        return posts.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        switch indexPath.row {
-        case 0:
-            (cell.contentView.subviews.first as! UILabel).text = "UITableView Playground"
-        case 1:
-            (cell.contentView.subviews.first as! UILabel).text = "Test Networking"
-        default:
-            cell.detailTextLabel?.text = "UITableView Playground"
-        }
+        cell.textLabel?.text = "The post id is: \(posts[indexPath.row].id!)"
+        cell.detailTextLabel?.text = posts[indexPath.row].title
 
         return cell
     }
+    
 
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        var controllerName = ""
-        switch indexPath.row {
-        case 0:
-            controllerName = "tableviewPlayground"
-        case 1:
-            controllerName = "testNetworking"
-        default:
-            controllerName = "tableviewPlayground"
-        }
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: controllerName)
-        self.navigationController!.pushViewController(vc, animated: true)
-    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

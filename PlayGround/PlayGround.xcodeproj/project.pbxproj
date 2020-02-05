@@ -22,6 +22,12 @@
 		0924C7BE23EB3921001C4228 /* UtilityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0924C7BD23EB3921001C4228 /* UtilityFramework.framework */; };
 		0924C7BF23EB3921001C4228 /* UtilityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0924C7BD23EB3921001C4228 /* UtilityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0924C7C223EB3D79001C4228 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924C7C123EB3D79001C4228 /* FirstViewController.swift */; };
+		0924C7C823EB4DF6001C4228 /* NetworkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0924C7C723EB4DF6001C4228 /* NetworkFramework.framework */; };
+		0924C7C923EB4DF6001C4228 /* NetworkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0924C7C723EB4DF6001C4228 /* NetworkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0924C7CB23EB4E42001C4228 /* TestNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924C7CA23EB4E42001C4228 /* TestNetworking.swift */; };
+		09B00BD423EB5A850052DBCF /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B00BD323EB5A850052DBCF /* Posts.swift */; };
+		09B00BD823EB61BE0052DBCF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B00BD723EB61BE0052DBCF /* NetworkingManager.swift */; };
+		09B00BDC23EB79450052DBCF /* TestNetworkingParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B00BDB23EB79450052DBCF /* TestNetworkingParseJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0924C7C923EB4DF6001C4228 /* NetworkFramework.framework in Embed Frameworks */,
 				0924C7BF23EB3921001C4228 /* UtilityFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -76,6 +83,11 @@
 		0924C7AC23EA13E6001C4228 /* IndexController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexController.swift; sourceTree = "<group>"; };
 		0924C7BD23EB3921001C4228 /* UtilityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UtilityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0924C7C123EB3D79001C4228 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		0924C7C723EB4DF6001C4228 /* NetworkFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0924C7CA23EB4E42001C4228 /* TestNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworking.swift; sourceTree = "<group>"; };
+		09B00BD323EB5A850052DBCF /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		09B00BD723EB61BE0052DBCF /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		09B00BDB23EB79450052DBCF /* TestNetworkingParseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkingParseJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0924C7C823EB4DF6001C4228 /* NetworkFramework.framework in Frameworks */,
 				0924C7BE23EB3921001C4228 /* UtilityFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +141,8 @@
 		0924C76A23E87600001C4228 /* PlayGround */ = {
 			isa = PBXGroup;
 			children = (
+				09B00BD623EB61AB0052DBCF /* utils */,
+				0924C7C623EB4DDC001C4228 /* networking */,
 				0924C7A523E9F32E001C4228 /* tableview */,
 				0924C7A223E87709001C4228 /* codable */,
 				0924C79D23E87618001C4228 /* viewFromNib */,
@@ -189,9 +204,36 @@
 		0924C7BC23EB3921001C4228 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0924C7C723EB4DF6001C4228 /* NetworkFramework.framework */,
 				0924C7BD23EB3921001C4228 /* UtilityFramework.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0924C7C623EB4DDC001C4228 /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				09B00BD523EB5AC40052DBCF /* models */,
+				0924C7CA23EB4E42001C4228 /* TestNetworking.swift */,
+				09B00BDB23EB79450052DBCF /* TestNetworkingParseJSON.swift */,
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		09B00BD523EB5AC40052DBCF /* models */ = {
+			isa = PBXGroup;
+			children = (
+				09B00BD323EB5A850052DBCF /* Posts.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		09B00BD623EB61AB0052DBCF /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				09B00BD723EB61BE0052DBCF /* NetworkingManager.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,11 +371,15 @@
 			files = (
 				0924C7AD23EA13E6001C4228 /* IndexController.swift in Sources */,
 				0924C7A123E8767C001C4228 /* TestView.swift in Sources */,
+				09B00BD423EB5A850052DBCF /* Posts.swift in Sources */,
 				0924C76C23E87600001C4228 /* AppDelegate.swift in Sources */,
 				0924C7A423E87733001C4228 /* TestCodable.swift in Sources */,
+				09B00BD823EB61BE0052DBCF /* NetworkingManager.swift in Sources */,
 				0924C7A723E9F52E001C4228 /* TableViewController.swift in Sources */,
 				0924C76E23E87600001C4228 /* SceneDelegate.swift in Sources */,
 				0924C7C223EB3D79001C4228 /* FirstViewController.swift in Sources */,
+				0924C7CB23EB4E42001C4228 /* TestNetworking.swift in Sources */,
+				09B00BDC23EB79450052DBCF /* TestNetworkingParseJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
