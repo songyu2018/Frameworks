@@ -19,4 +19,7 @@
    <FileRef
       location = "group:SampleApplication/SampleApplication.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:PlayGround/PlayGround.xcodeproj">
+   </FileRef>
 </Workspace>
