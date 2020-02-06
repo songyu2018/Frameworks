@@ -20,9 +20,9 @@ class TestNetworkingParseJSON: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NetworkingManager.shared.dataTask(method: .GET, sURL: url, headers: nil, body: nil) { (success, dictResponse) in
-                           print(dictResponse)
-            if let response: [String: AnyObject] = dictResponse[NetworkingManager.RESPONSE] as? [String: AnyObject]{
+        NetworkingManager.shared.dataTask(method: .GET, sURL: url, headers: nil, body: nil) { (success, responseObject) in
+            if let response: [String: AnyObject] = responseObject.response as? [String: AnyObject] {
+                print(response)
                 self.parseJSON(data: response)
             }
         }

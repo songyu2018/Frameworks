@@ -20,9 +20,9 @@ class TestNetworking: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NetworkingManager.shared.dataTask(method: .GET, sURL: url, headers: nil, body: nil) { (success, dictResponse) in
-                           print(dictResponse)
-            if let response = dictResponse[NetworkingManager.RESPONSE]{
+        NetworkingManager.shared.dataTask(method: .GET, sURL: url, headers: nil, body: nil) { (success, responseObject) in
+            if let response = responseObject.response {
+                print(response)
                 self.parseData(data: response)
             }
         }

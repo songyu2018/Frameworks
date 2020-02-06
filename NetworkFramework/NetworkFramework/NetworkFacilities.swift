@@ -22,17 +22,37 @@ public enum DataTaskState: String {
     case cancelled = "Cancelled"
 }
 
+public class ResponseResult {
+    public enum Error: Swift.Error {
+      case unknownAPIResponse
+      case generic
+      case invalidURL
+      case discarded
+    }
+    
+    public var response: Any?
+    public var error: Error?
+    public var url: String?
+    public var method: HTTPMethod?
+    public var carrier: Any?
+}
+
 public protocol NetworkFacilities {
     var extra_resonse_delay_milliseconds: Int {get set} // add an extra delay onto response time for
     var dataTaskState: DataTaskState {get set}
-    func dataTask(method: HTTPMethod, sURL: String, headers dictHeaders: Dictionary<String, String>?, body dictBody: Dictionary<String, Any>?, completion: @escaping (Bool, Dictionary<String, Any>) -> ())
+    func dataTask(method: HTTPMethod, sURL: String, headers dictHeaders: Dictionary<String, String>?, body dictBody: Dictionary<String, Any>?, completion: @escaping (Bool, ResponseResult) -> ())
     init(dataTaskState: DataTaskState, extra_resonse_delay_milliseconds: Int)
 }
 
 
 public extension NetworkFacilities {
-    func dataTask(method: HTTPMethod, sURL: String, headers dictHeaders: Dictionary<String, String>?, body dictBody: Dictionary<String, Any>?, completion: @escaping (Bool, Dictionary<String, Any>) -> ()) {
-        var dictResponse: [String:Any] = ["__REQUEST__": ["URL": sURL, "METHOD": method.rawValue], "__CARRIER__": self]
+    func dataTask(method: HTTPMethod, sURL: String, headers dictHeaders: Dictionary<String, String>?, body dictBody: Dictionary<String, Any>?, completion: @escaping (Bool, ResponseResult) -> ()) {
+        let responseObject = ResponseResult()
+        responseObject.method = method
+        responseObject.url = sURL
+        responseObject.carrier = self
+        
+        //var dictResponse: [String:Any] = ["__REQUEST__": ["URL": sURL, "METHOD": method.rawValue], "__CARRIER__": self]
         if let url = URL(string: sURL) {
             var request = URLRequest(url: url)
             request.httpMethod = method.rawValue
@@ -54,24 +74,24 @@ public extension NetworkFacilities {
                         if let _ = urlResponse,
                             let data = data,
                             let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
-                            dictResponse["__RESPONSE__"] = jsonData
-                            completion(true, dictResponse)
+                            responseObject.response = jsonData
+                            completion(true, responseObject)
                         } else {
-                            dictResponse["__ABNORMAL__"] = "Abnormal in response."
-                            completion(false, dictResponse)
+                            responseObject.error = ResponseResult.Error.generic
+                            completion(false, responseObject)
                         }
                     }
                     else {
                         print("Response discarded due to data task state(\(self.dataTaskState.rawValue)).")
                         // suspended or cancelled, does not expect responding
-                        // let dictResponse = ["__DISCARDED__":"Response discarded due to data task state(\(self.dataTaskState.rawValue))."]
-                        // completion(dictResponse, urlResponse, error)
+                        responseObject.error = ResponseResult.Error.discarded
+                        completion(false, responseObject)
                     }
                 })}.resume()
         }
         else {
-            dictResponse["__RESPONSE__"] = "Invalid URL"
-            completion(false, dictResponse)
+            responseObject.error = ResponseResult.Error.invalidURL
+            completion(false, responseObject)
         }
     }
 }

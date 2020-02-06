@@ -9,20 +9,14 @@
 import Foundation
 import NetworkFramework
 
-enum Result<ResultType> {
+public enum Result<ResultType> {
   case results(ResultType)
   case error(Error)
-}
-
-enum Error: Swift.Error {
-  case unknownAPIResponse
-  case generic
 }
 
 class NetworkingManager: NetworkFacilities {
     
     static let shared = NetworkingManager(dataTaskState: .active, extra_resonse_delay_milliseconds: 0)
-    static let RESPONSE = "__RESPONSE__"
     
     var dataTaskState: DataTaskState
     var extra_resonse_delay_milliseconds: Int
@@ -34,13 +28,13 @@ class NetworkingManager: NetworkFacilities {
     }
     
     func get(url: String, completion: @escaping (Result<Any>) -> Void) {
-        self.dataTask(method: .GET, sURL: url, headers: nil, body: nil) { (success, dictResponse) in
-            if let resultsJSON = dictResponse[NetworkingManager.RESPONSE] {
+        self.dataTask(method: .GET, sURL: url, headers: nil, body: nil) { (success, responseObject) in
+            if let resultsJSON = responseObject.response {
               DispatchQueue.main.async {
                 completion(Result.results(resultsJSON))
               }
             } else {
-              completion(Result.error(Error.generic))
+              completion(Result.error(ResponseResult.Error.generic))
             }
         }
     }
