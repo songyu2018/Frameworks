@@ -1,26 +1,21 @@
 //
-//  firstViewController.swift
+//  AnimationViewController.swift
 //  PlayGround
 //
-//  Created by Yu Song on 2020-02-05.
+//  Created by Yu Song on 2020-02-06.
 //  Copyright © 2020 Yu Song. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class AnimationViewController: UIViewController {
 
-    @IBAction func addView(_ sender: UIButton) {
-        let view = TestView(frame: CGRect(x: 0.0, y: 0.0, width: 300, height: 200))
-        self.view.addSubview(view)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation

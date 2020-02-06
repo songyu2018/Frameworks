@@ -29,7 +29,7 @@ class IndexController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return 4
     }
 
     
@@ -38,9 +38,13 @@ class IndexController: UITableViewController {
 
         switch indexPath.row {
         case 0:
-            (cell.contentView.subviews.first as! UILabel).text = "UITableView Playground"
+            (cell.contentView.subviews.first as! UILabel).text = "UITableView Playground (Storyboard)"
         case 1:
-            (cell.contentView.subviews.first as! UILabel).text = "Test Networking"
+            (cell.contentView.subviews.first as! UILabel).text = "Test Networking (Storyboard)"
+        case 2:
+            (cell.contentView.subviews.first as! UILabel).text = "Test Xib View (Storyboard)"
+        case 3:
+            (cell.contentView.subviews.first as! UILabel).text = "Test Animation (Nib)"
         default:
             cell.detailTextLabel?.text = "UITableView Playground"
         }
@@ -51,19 +55,29 @@ class IndexController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        var vc: UIViewController? = nil
         var controllerName = ""
         switch indexPath.row {
         case 0:
-            controllerName = "tableviewPlayground"
+            controllerName = "TableviewPlayground"
         case 1:
-            controllerName = "testNetworking"
+            controllerName = "TestNetworking"
+        case 2:
+            controllerName = "XibViewController"
+        case 3:
+            vc = AnimationViewController.loadFromNib()
         default:
-            controllerName = "tableviewPlayground"
+            controllerName = "TableviewPlayground"
+        }
+    
+        if indexPath.row < 3 {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            vc = storyboard.instantiateViewController(withIdentifier: controllerName)
         }
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: controllerName)
-        self.navigationController!.pushViewController(vc, animated: true)
+        if let controller = vc {
+            self.navigationController!.pushViewController(controller, animated: true)
+        }
     }
     /*
     // Override to support conditional editing of the table view.

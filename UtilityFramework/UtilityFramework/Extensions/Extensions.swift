@@ -525,4 +525,7 @@ public extension UIViewController {
         return (self === self.navigationController?.viewControllers.last)
     }
     
+    class func loadFromNib<T: UIViewController>() -> T {
+         return T(nibName: String(describing: self), bundle: nil)
+    }
 }
